@@ -1,0 +1,164 @@
+{
+  "artifact_version": "1.0.0",
+  "class_labels": {
+    "0": "Low",
+    "1": "Medium",
+    "2": "High"
+  },
+  "class_weights": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 1.5
+  },
+  "features_in_order": [
+    "study_load",
+    "bullying",
+    "social_support",
+    "noise_level",
+    "peer_pressure",
+    "teacher_student_relationship",
+    "living_conditions",
+    "safety",
+    "basic_needs",
+    "extracurricular_activities"
+  ],
+  "held_out_evaluation": {
+    "balanced_accuracy": 0.872998,
+    "elevated_stress_recall": 0.938356,
+    "high_stress_precision": 0.84,
+    "high_stress_recall": 0.851351,
+    "macro_f1": 0.873086,
+    "note": "Metrics were measured before the final all-data refit."
+  },
+  "input_schema": {
+    "basic_needs": {
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer"
+    },
+    "bullying": {
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer"
+    },
+    "extracurricular_activities": {
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer"
+    },
+    "living_conditions": {
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer"
+    },
+    "noise_level": {
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer"
+    },
+    "peer_pressure": {
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer"
+    },
+    "safety": {
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer"
+    },
+    "social_support": {
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "type": "integer"
+    },
+    "study_load": {
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer"
+    },
+    "teacher_student_relationship": {
+      "allowed_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer"
+    }
+  },
+  "joblib_version": "1.5.3",
+  "model_file": "stress_risk_pipeline.joblib",
+  "model_sha256": "f397e5b97f21491b3632d8a2e67bbde1f8f7441db0400ef8ad0ad008503639ef",
+  "model_type": "Weighted multinomial logistic regression",
+  "pipeline_steps": [
+    "most-frequent imputation",
+    "standard scaling",
+    "classification"
+  ],
+  "python_version": "3.12.13",
+  "random_state": 20260827,
+  "scikit_learn_version": "1.8.0",
+  "target": "stress_level",
+  "training_dataset_sha256": "14a45e92708b0c063ad4ab04563aa8fd4e3fc27157fd282e1c0658dc5161faed",
+  "training_rows": 1100,
+  "use_boundaries": [
+    "Portfolio prototype; not a diagnostic or clinical instrument.",
+    "Do not use for automatic academic or disciplinary decisions.",
+    "Dataset code meanings and external validity are not independently verified.",
+    "Load the joblib file only from a trusted source."
+  ]
+}
